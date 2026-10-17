@@ -60,6 +60,9 @@ button { font: inherit; }
 .top-title { position: absolute; left: 50%; transform: translateX(-50%); color: #ded5e0; font: 10px var(--mono); }
 .top-dot { padding: 0 2px; color: #fa8658; }
 .top-right { gap: 18px; }
+.install-button { padding: 4px 9px; border: 1px solid rgb(255 255 255 / 22%); border-radius: 5px; color: #fffaf7; background: rgb(255 255 255 / 8%); font-size: 10px; cursor: pointer; }
+.install-button:hover { background: rgb(255 255 255 / 15%); }
+.install-button[hidden] { display: none; }
 .status-pill { display: flex; align-items: center; gap: 7px; color: #c7bdca; font-size: 10px; }
 .status-pill i, .live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #76c994; box-shadow: 0 0 8px rgb(118 201 148 / 55%); }
 .clock { color: #d5ccd8; font: 10px var(--mono); }

@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#2c1635">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="{% static 'portfolio/manifest.webmanifest' %}">
+  <link rel="icon" href="{% static 'portfolio/icon.svg' %}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{% static 'portfolio/icon-192.png' %}">
   <meta name="description" content="Moses Kipsang — lecturer, programmer, and author building practical systems for learning and clear thinking.">
   <title>Moses Kipsang — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +23,7 @@
     <header class="topbar">
       <a class="system-mark" href="#home" aria-label="Moses Kipsang home"><span class="ubuntu-symbol">●</span><span>Activities</span></a>
       <div class="top-title">mkinux<span class="top-dot">@</span>portfolio: ~</div>
-      <div class="top-right"><span class="status-pill"><i></i> Available for opportunities</span><span class="clock">NAK 09:41</span><button class="menu-button" aria-label="Back to top">↑</button></div>
+      <div class="top-right"><span class="status-pill"><i></i> Available for opportunities</span><button class="install-button" type="button" hidden>Install app</button><span class="clock">NAK 09:41</span><button class="menu-button" aria-label="Back to top">↑</button></div>
     </header>
 
     <aside class="dock" aria-label="Quick navigation">
@@ -85,5 +91,6 @@
     </main>
   </div>
   <script src="{% static 'portfolio/site.js' %}"></script>
+  <script src="{% static 'portfolio/pwa.js' %}" defer></script>
 </body>
 </html>

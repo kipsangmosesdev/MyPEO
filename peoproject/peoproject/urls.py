@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from poeapp.views import home
+from poeapp.views import home, service_worker
 
 urlpatterns = [
     path('', home, name='home'),
+    path('service-worker.js', service_worker, name='service-worker'),
     path('admin/', admin.site.urls),
 ]
