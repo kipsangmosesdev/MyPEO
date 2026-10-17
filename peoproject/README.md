@@ -11,7 +11,7 @@ Django portfolio site with a responsive Ubuntu inspired interface.
 
 ## Deploy from GitHub to Vercel
 
-This repository is a Django project at its root (`manage.py` is in the root). Import the GitHub repository as a new Vercel project and leave the Root Directory set to `./`. Vercel detects Django from `manage.py`; leave the Framework Preset, Build Command, and Output Directory on their detected/default values. No `vercel.json` routing file or `/api` wrapper is needed.
+The GitHub repository contains the Django project in the `peoproject/` subdirectory. Import the GitHub repository as a new Vercel project and set the Root Directory to `peoproject` (the folder containing `manage.py`, `requirements.txt`, and `.python-version`). Vercel detects Django from `manage.py`; leave the Framework Preset, Build Command, and Output Directory on their detected/default values. No `vercel.json` routing file or `/api` wrapper is needed.
 
 Before the first deployment, add these **Production** environment variables in Vercel Project Settings → Environment Variables:
 
