@@ -2,6 +2,6 @@
   <rect width="512" height="512" rx="112" fill="#2c1635"/>
   <circle cx="256" cy="256" r="174" fill="none" stroke="#f4d8ca" stroke-opacity=".32" stroke-width="5"/>
   <circle cx="256" cy="256" r="132" fill="#e95420"/>
-  <path d="M158 350V162h46l105 119V162h45v188h-43L203 228v122z" fill="#fffaf7"/>
+  <text x="256" y="304" fill="#fffaf7" font-family="Arial, sans-serif" font-size="126" font-weight="700" letter-spacing="-8" text-anchor="middle">MK</text>
   <circle cx="385" cy="126" r="24" fill="#8bd0a6"/>
 </svg>
