@@ -32,6 +32,19 @@ if not SECRET_KEY:
 DEBUG = os.getenv('DEBUG', 'False').strip().lower() in {'1', 'true', 'yes', 'on'}
 
 ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '').split(',') if host.strip()]
+if os.getenv('VERCEL'):
+    ALLOWED_HOSTS.extend(['.vercel.app'])
+    vercel_url = os.getenv('VERCEL_URL', '').strip()
+    if vercel_url:
+        ALLOWED_HOSTS.append(vercel_url)
+
+CSRF_TRUSTED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',')
+    if origin.strip()
+]
+if os.getenv('VERCEL_URL'):
+    CSRF_TRUSTED_ORIGINS.append(f"https://{os.environ['VERCEL_URL'].strip()}")
 
 
 # Application definition
@@ -121,8 +134,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Vercel terminates TLS before forwarding requests to Django.
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
 
 
 # Email

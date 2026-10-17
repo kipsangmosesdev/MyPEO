@@ -23,6 +23,7 @@ media/
 staticfiles/
 
 # Local tooling
+.vercel/
 .vscode/
 .idea/
 .pytest_cache/
