@@ -1,4 +1,4 @@
-const CACHE_NAME = 'moses-portfolio-v6';
+const CACHE_NAME = 'moses-portfolio-v7';
 const APP_SHELL = [
   '/',
   '/static/portfolio/manifest.webmanifest',
@@ -37,11 +37,11 @@ self.addEventListener('fetch', (event) => {
         .then((response) => {
           if (response.ok) {
             const copy = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put('/', copy));
+            await caches.open(CACHE_NAME).then((cache) => cache.put('/', copy)).catch(() => {});
           }
           return response;
         })
-        .catch(async () => (await caches.match('/')) || caches.match('/static/portfolio/offline.html')),
+      .catch(async () => (await caches.match('/')) || (await caches.match('/static/portfolio/offline.html'))),
     );
     return;
   }
@@ -49,8 +49,11 @@ self.addEventListener('fetch', (event) => {
   if (url.pathname.startsWith('/static/portfolio/')) {
     event.respondWith(
       caches.match(request).then((cached) => cached || fetch(request).then((response) => {
-        if (response.ok) caches.open(CACHE_NAME).then((cache) => cache.put(request, response.clone()));
-        return response;
+        if (!response.ok) return response;
+        return caches.open(CACHE_NAME)
+          .then((cache) => cache.put(request, response.clone()))
+          .catch(() => {})
+          .then(() => response);
       })),
     );
   }

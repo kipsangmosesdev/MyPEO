@@ -29,6 +29,8 @@ html { scroll-behavior: smooth; scroll-padding-top: 30px; }
 body { min-width: 320px; margin: 0; font-size: 16px; line-height: 1.6; }
 a { color: inherit; }
 button { font: inherit; }
+:focus-visible { outline: 3px solid #ff9a73; outline-offset: 3px; }
+.window-content :focus-visible { outline-color: #b94920; }
 
 .desktop {
   min-height: 100vh;
@@ -221,6 +223,13 @@ button { font: inherit; }
 .project-meta span:first-child { color: #e95420; }
 .project-copy h3 { margin: 11px 0 6px; color: #302833; font: 600 25px/1.1 var(--display); letter-spacing: -.05em; }
 .project-copy p { margin: 0; color: #756d77; font-size: 12px; line-height: 1.75; }
+.project-copy .project-summary { margin-bottom: 17px; color: #514752; font-size: 13px; }
+.case-study { display: grid; margin: 14px 0 17px; gap: 12px; }
+.case-study > div { padding: 12px 13px; border-left: 2px solid #edd7cb; background: #fcfaf8; }
+.case-study h4 { margin: 0 0 5px; color: #4b394d; font: 600 10px var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+.case-study p { font-size: 11px; }
+.case-study .project-highlights { margin: 7px 0 0; }
+.case-study .project-highlights li { font-size: 10px; }
 .project-highlights { display: grid; margin: 14px 0 15px; padding: 0; gap: 8px; list-style: none; }
 .project-highlights li { position: relative; padding-left: 17px; color: #5f5662; font-size: 11px; line-height: 1.6; }
 .project-highlights li::before { position: absolute; top: .48em; left: 1px; width: 7px; height: 7px; content: ""; border-radius: 50%; background: #e95420; box-shadow: 0 0 0 3px #fff0e9; }
