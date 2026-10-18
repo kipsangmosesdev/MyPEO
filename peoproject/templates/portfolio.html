@@ -11,14 +11,98 @@
   <link rel="manifest" href="{% static 'portfolio/manifest.webmanifest' %}">
   <link rel="icon" href="{% static 'portfolio/icon.svg' %}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{% static 'portfolio/icon-192.png' %}">
-  <meta name="description" content="Selected projects by Moses Kipsang, a developer, educator, and author based in Nakuru, Kenya.">
+  <meta name="description" content="Moses Kipsang is a software developer and educator in Nakuru, Kenya. Explore XbomaSwift, a PropTech platform, and SakaTalent, an athletics talent platform.">
+  <meta name="author" content="Moses Kipsang">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://moseskipsang.vercel.app/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Moses Kipsang — Software Projects">
-  <meta property="og:description" content="Selected software projects by Moses Kipsang, including XbomaSwift and SakaTalent.">
+  <meta property="og:url" content="https://moseskipsang.vercel.app/">
+  <meta property="og:site_name" content="Moses Kipsang Portfolio">
+  <meta property="og:locale" content="en_KE">
+  <meta property="og:title" content="Moses Kipsang | Software Developer in Kenya">
+  <meta property="og:description" content="Explore XbomaSwift, a PropTech rental and relocation platform, and SakaTalent, a grassroots athletics discovery and performance platform.">
+  <meta property="og:image" content="https://moseskipsang.vercel.app{% static 'portfolio/moses-kipsang.jpg' %}">
+  <meta property="og:image:alt" content="Portrait of Moses Kipsang">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Moses Kipsang — Software Projects">
-  <meta name="twitter:description" content="Selected software projects by Moses Kipsang, including XbomaSwift and SakaTalent.">
-  <title>Moses Kipsang — Portfolio</title>
+  <meta name="twitter:title" content="Moses Kipsang | Software Developer in Kenya">
+  <meta name="twitter:description" content="Explore XbomaSwift, a PropTech rental and relocation platform, and SakaTalent, a grassroots athletics discovery and performance platform.">
+  <meta name="twitter:image" content="https://moseskipsang.vercel.app{% static 'portfolio/moses-kipsang.jpg' %}">
+  <title>Moses Kipsang | Software Developer &amp; Portfolio</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://moseskipsang.vercel.app/#person",
+        "name": "Moses Kipsang",
+        "url": "https://moseskipsang.vercel.app/",
+        "image": "https://moseskipsang.vercel.app{% static 'portfolio/moses-kipsang.jpg' %}",
+        "jobTitle": ["Software Developer", "Educator", "Author"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nakuru",
+          "addressCountry": "KE"
+        },
+        "sameAs": ["https://www.linkedin.com/in/moses-kipsang-8029553a1/"],
+        "knowsAbout": ["Python", "Django", "PostgreSQL", "JavaScript", "Geospatial applications", "Software development"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://moseskipsang.vercel.app/#website",
+        "url": "https://moseskipsang.vercel.app/",
+        "name": "Moses Kipsang Portfolio",
+        "inLanguage": "en-KE",
+        "publisher": {"@id": "https://moseskipsang.vercel.app/#person"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://moseskipsang.vercel.app/#webpage",
+        "url": "https://moseskipsang.vercel.app/",
+        "name": "Moses Kipsang | Software Developer & Portfolio",
+        "isPartOf": {"@id": "https://moseskipsang.vercel.app/#website"},
+        "about": {"@id": "https://moseskipsang.vercel.app/#person"},
+        "inLanguage": "en-KE",
+        "mainEntity": {"@id": "https://moseskipsang.vercel.app/#projects"}
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://moseskipsang.vercel.app/#projects",
+        "name": "Selected software projects",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "@id": "https://moseskipsang.vercel.app/#xbomaswift",
+              "name": "XbomaSwift",
+              "applicationCategory": "Real Estate",
+              "description": "A PropTech platform for rental discovery and relocation in Kenya, with map-based property search, recommendations, navigation, and mover discovery.",
+              "creator": {"@id": "https://moseskipsang.vercel.app/#person"},
+              "programmingLanguage": ["Python", "JavaScript"],
+              "operatingSystem": "Web"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareApplication",
+              "@id": "https://moseskipsang.vercel.app/#sakatalent",
+              "name": "SakaTalent",
+              "applicationCategory": "Sports",
+              "description": "A working MVP for grassroots athletics talent discovery and performance tracking in Kenya, developed as an ICT Department team project.",
+              "contributor": {"@id": "https://moseskipsang.vercel.app/#person"},
+              "programmingLanguage": ["Python"],
+              "operatingSystem": "Web"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
