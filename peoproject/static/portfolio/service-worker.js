@@ -1,4 +1,4 @@
-const CACHE_NAME = 'moses-portfolio-v1';
+const CACHE_NAME = 'moses-portfolio-v5';
 const APP_SHELL = [
   '/',
   '/static/portfolio/manifest.webmanifest',
@@ -8,6 +8,7 @@ const APP_SHELL = [
   '/static/portfolio/icon.svg',
   '/static/portfolio/icon-192.png',
   '/static/portfolio/icon-512.png',
+  '/static/portfolio/moses-kipsang.jpg',
   '/static/portfolio/offline.html',
 ];
 

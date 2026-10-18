@@ -11,7 +11,7 @@
   <link rel="manifest" href="{% static 'portfolio/manifest.webmanifest' %}">
   <link rel="icon" href="{% static 'portfolio/icon.svg' %}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{% static 'portfolio/icon-192.png' %}">
-  <meta name="description" content="Moses Kipsang — lecturer, programmer, and author building practical systems for learning and clear thinking.">
+  <meta name="description" content="Selected projects by Moses Kipsang, a developer, educator, and author based in Nakuru, Kenya.">
   <title>Moses Kipsang — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,8 +29,8 @@
     <aside class="dock" aria-label="Quick navigation">
       <a href="#home" class="dock-icon active" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5v8a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></a>
       <a href="#about" class="dock-icon" aria-label="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.5-4 3.1-6 7.5-6s7 2 7.5 6z"/></svg></a>
-      <a href="#experience" class="dock-icon" aria-label="Experience"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 5V3h8v2M3 10h18m-11 0v2h4v-2"/></svg></a>
-      <a href="#skills" class="dock-icon" aria-label="Skills"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-12-2 14"/></svg></a>
+      <a href="#projects" class="dock-icon" aria-label="Selected projects"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 5V3h8v2M3 10h18m-11 0v2h4v-2"/></svg></a>
+      <a href="#background" class="dock-icon" aria-label="Background"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-12-2 14"/></svg></a>
       <span class="dock-divider"></span>
       <a href="#book" class="dock-icon book-dock" aria-label="The Silent Struggle">✦</a>
       <span class="dock-spacer"></span>
@@ -39,50 +39,56 @@
 
     <main class="workspace" id="home">
       <div class="window">
-        <div class="window-bar"><div class="window-controls"><span></span><span></span><span></span></div><div class="window-name">About Moses — Portfolio</div><div class="window-actions">⌕ <span>⋮</span></div></div>
+        <div class="window-bar"><div class="window-controls"><span></span><span></span><span></span></div><div class="window-name">Moses Kipsang · Selected Work</div><div class="window-actions">⌕ <span>⋮</span></div></div>
         <div class="window-content">
           <section class="hero">
             <div class="hero-copy">
               <div class="eyebrow"><span class="prompt">~/profile $</span> whoami</div>
               <p class="hello">Hello, I’m</p>
               <h1>Moses<br><span>Kipsang</span><b>.</b></h1>
-              <p class="role-line">Lecturer <span>·</span> Programmer <span>·</span> Author</p>
-              <p class="hero-summary">I teach code, build practical tools for clear thinking, and help people find their way through the hard parts.</p>
-              <div class="hero-buttons"><a class="button button-primary" href="#experience">Explore my work <span>↗</span></a><a class="button button-quiet" href="https://www.linkedin.com/in/moses-kipsang-8029553a1/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span>→</span></a></div>
+              <p class="role-line">Developer <span>·</span> Educator <span>·</span> Author</p>
+              <p class="hero-summary">I develop digital platforms and teach programming. My work spans full-stack products, location-aware systems, and tools that make talent easier to discover.</p>
+              <div class="hero-buttons"><a class="button button-primary" href="#projects">Explore selected work <span>↗</span></a><a class="button button-quiet" href="https://www.linkedin.com/in/moses-kipsang-8029553a1/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span>→</span></a></div>
               <div class="hero-meta"><span><i class="live-dot"></i> Lecturer at KITI</span><span class="meta-divider"></span><span>Nakuru, Kenya <span class="kenya">◉</span></span></div>
             </div>
-            <div class="hero-art" aria-label="Abstract Ubuntu inspired portrait illustration">
-              <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-sun"></div>
-              <div class="portrait"><div class="portrait-hair"></div><div class="portrait-face"><span class="eye eye-left"></span><span class="eye eye-right"></span><span class="nose"></span><span class="smile"></span></div><div class="portrait-neck"></div><div class="portrait-shirt"></div><div class="portrait-collar"></div></div>
-              <div class="art-sticker sticker-code"><span>&lt;/&gt;</span><small>curious<br>by nature</small></div>
-              <div class="art-sticker sticker-teach"><span>✳</span><small>learn<br>by doing</small></div>
-              <div class="art-caption"><span>01 — 03</span><span>NAKURU · KE</span></div>
+            <div class="hero-art">
+              <img class="portrait-photo" src="{% static 'portfolio/moses-kipsang.jpg' %}" alt="Moses Kipsang">
+              <div class="art-caption"><span>MOSES KIPSANG</span><span>NAKURU · KE</span></div>
             </div>
           </section>
 
           <section class="terminal-strip" aria-label="A quick introduction"><div class="terminal-prompt">mose@kiti:~$</div><div class="terminal-text">building <span>understanding</span> through code, teaching &amp; <span>resilience</span><i class="cursor"></i></div><div class="terminal-lights"><i></i><i></i><i></i></div></section>
 
-          <section class="about-section section-block" id="about">
-            <div class="section-heading"><div><span class="section-index">01 / ABOUT</span><h2>More than the job title.</h2></div><p>A little about what drives my work.</p></div>
-            <div class="about-grid"><div class="about-lead"><span class="quote-mark">“</span><p>I develop practical frameworks for <em>clear thinking under pressure</em> — especially when progress is invisible and support is limited.</p></div><div class="about-body"><p>I’m a lecturer in Computer Programming Principles and the author of <strong>The Silent Struggle</strong>. My work is grounded in disciplined reasoning, personal responsibility, and structured problem-solving shaped by lived experience.</p><p>I’m interested in how people navigate uncertainty, rebuild under constraint, and create the internal systems that sustain performance when external conditions fail.</p><div class="top-skills"><span>Independent thinking</span><span>Structured thinking</span><span>Critical thinking</span></div></div></div>
-          </section>
-
-          <section class="experience-section section-block" id="experience">
-            <div class="section-heading"><div><span class="section-index">02 / EXPERIENCE</span><h2>Where I’ve made a difference.</h2></div><p>Learning, serving, and solving.</p></div>
-            <div class="timeline">
-              <article class="experience-card current"><div class="timeline-rail"><span class="timeline-node"></span><span class="timeline-line"></span></div><div class="experience-main"><div class="job-top"><div><span class="job-type">EDUCATION · FULL TIME</span><h3>Lecturer</h3><p class="company">Kenya Industrial Training Institute <span>·</span> Nakuru, Kenya</p></div><span class="job-date">SEP 2023 — PRESENT <i class="current-tag">CURRENT</i></span></div><p class="job-desc">Teaching Computer Programming Principles and helping learners build confident, practical foundations in code.</p><div class="chips"><span>Programming</span><span>Python</span><span>C / C++</span><span>HTML5</span><span>Mentoring</span></div></div></article>
-              <article class="experience-card"><div class="timeline-rail"><span class="timeline-node"></span><span class="timeline-line"></span></div><div class="experience-main"><div class="job-top"><div><span class="job-type">PUBLIC SERVICE · ICT SUPPORT</span><h3>Intern</h3><p class="company">Public Service Commission <span>·</span> Kenya</p></div><span class="job-date">JUN 2021 — JUN 2022</span></div><p class="job-desc">Resolved 150+ ICT issues for applicants using online public-service systems. Supported account recovery, device maintenance, virtual interviews, network upkeep, and pilot testing of the Online Wealth Declaration System.</p><div class="chips"><span>Technical support</span><span>Cisco Webex</span><span>Network support</span><span>System testing</span></div></div></article>
-              <article class="experience-card"><div class="timeline-rail"><span class="timeline-node"></span><span class="timeline-line"></span></div><div class="experience-main"><div class="job-top"><div><span class="job-type">TRAINING · DIGITAL LEARNING</span><h3>Information Technology Tutor</h3><p class="company">VLS-Kiambu <span>·</span> Kenya</p></div><span class="job-date">DEC 2019 — APR 2021</span></div><p class="job-desc">Trained 120+ youth through the KYEOP program in ICT fundamentals and web programming. Administered the learning portal to improve learner monitoring and reporting.</p><div class="chips"><span>ICT fundamentals</span><span>Web programming</span><span>Learning platforms</span></div></div></article>
-              <article class="experience-card"><div class="timeline-rail"><span class="timeline-node"></span></div><div class="experience-main"><div class="job-top"><div><span class="job-type">HIGHER EDUCATION · IT OPERATIONS</span><h3>Information Technology Specialist</h3><p class="company">USIU-Africa <span>·</span> Nairobi, Kenya</p></div><span class="job-date">SEP 2019 — DEC 2019</span></div><p class="job-desc">Deployed and maintained QuickBooks, SPSS, and Oracle across 150+ computers. Prepared labs, supported servers and networks, and helped supervise computer-based examinations.</p><div class="chips"><span>Software deployment</span><span>Lab support</span><span>Networking</span></div></div></article>
+          <section class="projects-section section-block" id="projects">
+            <div class="section-heading"><div><span class="section-index">01 / SELECTED WORK</span><h2>Digital work built for real needs.</h2></div><p>Two platforms, two different challenges.</p></div>
+            <div class="project-grid">
+              <article class="project-card project-xboma">
+                <div class="project-visual xboma-visual" aria-hidden="true"><div class="xboma-topline"><span class="project-brand">xboma<span>swift</span></span><span class="project-menu">● ● ●</span></div><div class="xboma-orbit orbit-a"></div><div class="xboma-orbit orbit-b"></div><div class="xboma-route"><i></i><i></i><span></span></div><div class="xboma-label">X B O M A&nbsp; / &nbsp;S W I F T</div></div>
+                <div class="project-copy"><div class="project-meta"><span>DESIGNED &amp; DEVELOPED</span><span>01</span></div><h3>XbomaSwift</h3><p>A PropTech platform for rental discovery and relocation in Kenya. I designed and developed a connected search experience that helps tenants find, evaluate, navigate to, and move into rental homes.</p><ul class="project-highlights"><li>Find vacant rentals within 5 km and get AI recommendations based on budget, location, amenities, and availability.</li><li>Navigate to a property and discover nearby movers through Google Maps.</li><li>Give landlords listing analytics; support reviews, M-Pesa subscriptions, token payments, and tenant and landlord accounts.</li><li>Cloud-ready architecture designed for scale and future AI expansion.</li></ul><div class="project-stack"><span>Python</span><span>Django</span><span>PostgreSQL</span><span>JavaScript</span><span>Google Maps API</span></div><div class="project-footer"><span class="project-type">PropTech · Kenya</span><a href="https://www.linkedin.com/in/moses-kipsang-8029553a1/" target="_blank" rel="noopener noreferrer">Discuss the project <span>↗</span></a></div></div>
+              </article>
+              <article class="project-card project-saka">
+                <div class="project-visual saka-visual" aria-hidden="true"><div class="saka-topline"><span class="saka-mark">S</span><span class="saka-brand">SAKA <i>TALENT</i></span><span class="saka-status">●</span></div><div class="saka-heading">Grassroots<br><em>in focus.</em></div><div class="saka-people"><i></i><i></i><i></i><i></i><i></i></div><div class="saka-bottomline"><span>ATHLETE DISCOVERY</span><span>→</span></div></div>
+                <div class="project-copy"><div class="project-meta"><span>ICT DEPARTMENT TEAM PROJECT</span><span>02</span></div><h3>SakaTalent</h3><p>A web-based talent discovery and performance-tracking platform for grassroots track athletes in Kenya. Developed with colleagues in the ICT Department, its working MVP gives athletes a public profile and a place to build a verified record of their results.</p><ul class="project-highlights"><li>Athletes create profiles and submit race times; the current team verifier reviews results before publication.</li><li>Discover runners by county, gender, and event across the 100 m, 200 m, 400 m, and 800 m.</li><li>Compare verified event-specific averages, rankings, and each athlete’s best recorded time.</li><li>Designed as an additional visibility channel that complements existing athletics structures.</li></ul><div class="project-stack"><span>Python</span><span>Django</span><span>SQLite · MVP</span><span>PostgreSQL planned</span></div><div class="project-footer"><span class="project-type">Working MVP · Team build</span><a href="https://www.linkedin.com/in/moses-kipsang-8029553a1/" target="_blank" rel="noopener noreferrer">Discuss the project <span>↗</span></a></div></div>
+              </article>
             </div>
           </section>
 
+          <section class="about-section section-block" id="about">
+            <div class="section-heading"><div><span class="section-index">02 / ABOUT</span><h2>More than the job title.</h2></div><p>A little about what drives my work.</p></div>
+            <div class="about-grid"><div class="about-lead"><span class="quote-mark">“</span><p>I develop practical frameworks for <em>clear thinking under pressure</em> — especially when progress is invisible and support is limited.</p></div><div class="about-body"><p>I’m a lecturer in Computer Programming Principles and the author of <strong>The Silent Struggle</strong>. My work is grounded in disciplined reasoning, personal responsibility, and structured problem-solving shaped by lived experience.</p><p>I’m interested in how people navigate uncertainty, rebuild under constraint, and create the internal systems that sustain performance when external conditions fail.</p><div class="top-skills"><span>Independent thinking</span><span>Structured thinking</span><span>Critical thinking</span></div></div></div>
+          </section>
+
+          <section class="background-section section-block" id="background">
+            <div class="section-heading"><div><span class="section-index">03 / BACKGROUND</span><h2>Experience behind the work.</h2></div><p>A little context for my approach.</p></div>
+            <div class="background-card"><div><span class="background-kicker">TEACHING</span><h3>Lecturer at KITI</h3><p>I teach Computer Programming Principles and help learners build practical foundations in code.</p></div><div><span class="background-kicker">BUILDING</span><h3>Programming &amp; IT</h3><p>My work spans software development, technical support, digital learning, and IT operations.</p></div><div><span class="background-kicker">WRITING</span><h3>Author of <em>The Silent Struggle</em></h3><p>Writing about resilience, clear thinking, and finding a way forward under pressure.</p></div></div>
+          </section>
+
           <section class="skills-section section-block" id="skills">
-            <div class="section-heading"><div><span class="section-index">03 / TOOLKIT</span><h2>Tools I work with.</h2></div><p>Always learning something new.</p></div>
+            <div class="section-heading"><div><span class="section-index">04 / TOOLKIT</span><h2>Tools I work with.</h2></div><p>Always learning something new.</p></div>
             <div class="skill-grid"><div class="skill-card"><span class="skill-icon icon-code">&lt;/&gt;</span><span class="skill-label">LANGUAGES</span><div class="skill-tags"><b>Python</b><b>C</b><b>C++</b><b>SQL</b><b>HTML5</b></div></div><div class="skill-card"><span class="skill-icon icon-framework">◈</span><span class="skill-label">FRAMEWORKS</span><div class="skill-tags"><b>Django</b></div></div><div class="skill-card"><span class="skill-icon icon-database">▦</span><span class="skill-label">DATABASES</span><div class="skill-tags"><b>PostgreSQL</b><b>SQLite</b></div></div><div class="skill-card"><span class="skill-icon icon-version">⌘</span><span class="skill-label">VERSION CONTROL</span><div class="skill-tags"><b>Git</b><b>Bitbucket</b></div></div></div>
           </section>
 
-          <section class="book-section" id="book"><div class="book-shape"><span>THE<br>SILENT<br>STRUGGLE</span><i>✳</i><small>MOSES KIPSANG</small></div><div class="book-copy"><span class="section-index">04 / AUTHOR</span><h2>Some battles are<br>quiet. The strength<br>to face them isn’t.</h2><p><em>The Silent Struggle</em> explores the unseen work of navigating adversity, taking responsibility, and learning to keep going when progress doesn’t show.</p><a class="button button-primary" href="https://gainclarity.gumroad.com/l/silentstruggle-free-guide" target="_blank" rel="noopener noreferrer">Get the free guide <span>↗</span></a></div><div class="book-spark">✳</div></section>
+          <section class="book-section" id="book"><div class="book-shape"><span>THE<br>SILENT<br>STRUGGLE</span><i>✳</i><small>MOSES KIPSANG</small></div><div class="book-copy"><span class="section-index">05 / AUTHOR</span><h2>Some battles are<br>quiet. The strength<br>to face them isn’t.</h2><p><em>The Silent Struggle</em> explores the unseen work of navigating adversity, taking responsibility, and learning to keep going when progress doesn’t show.</p><a class="button button-primary" href="https://gainclarity.gumroad.com/l/silentstruggle-free-guide" target="_blank" rel="noopener noreferrer">Get the free guide <span>↗</span></a></div><div class="book-spark">✳</div></section>
 
           <footer class="footer"><div><span class="footer-mark">●</span><span>Built with curiosity in Nakuru, Kenya.</span></div><span>© 2026 Moses Kipsang</span><a href="https://www.linkedin.com/in/moses-kipsang-8029553a1/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span>↗</span></a></footer>
         </div>
