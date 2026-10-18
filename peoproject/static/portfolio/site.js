@@ -1,14 +1,71 @@
 const clock = document.querySelector('.clock');
+const greeting = document.querySelector('#time-greeting');
 const updateClock = () => {
-  clock.textContent = `NAK ${new Intl.DateTimeFormat('en-GB', {
+  const now = new Date();
+  const parts = new Intl.DateTimeFormat('en-GB', {
     timeZone: 'Africa/Nairobi',
     hour: '2-digit',
     minute: '2-digit',
-  }).format(new Date())}`;
+    hourCycle: 'h23',
+  }).formatToParts(now);
+  const hour = Number(parts.find((part) => part.type === 'hour').value);
+  const time = parts.filter((part) => part.type === 'hour' || part.type === 'minute').map((part) => part.value).join(':');
+  const salutation = hour >= 5 && hour < 12 ? 'Good morning,' : hour >= 12 && hour < 18 ? 'Good afternoon,' : 'Good evening,';
+
+  clock.textContent = `NAK ${time}`;
+  greeting.textContent = salutation;
 };
 
 updateClock();
 window.setInterval(updateClock, 30_000);
+
+const typedCode = document.querySelector('.typed-code');
+const codeExamples = [
+  {
+    code: 'projects = ["XbomaSwift", "SakaTalent"]\nfor project in projects:\n    print(f"Building {project}")',
+    output: 'Building XbomaSwift\nBuilding SakaTalent',
+  },
+  {
+    code: 'verified = [r.time for r in results if r.verified]\nif verified:\n    average = sum(verified) / len(verified)',
+    output: 'Verified results only · average calculated',
+  },
+];
+
+if (typedCode) {
+  const output = document.querySelector('.code-output');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let exampleIndex = 0;
+
+  if (reducedMotion) {
+    typedCode.textContent = codeExamples[0].code;
+    output.innerHTML = '<span>›</span> Building XbomaSwift<br><span>›</span> Building SakaTalent';
+  } else {
+    const typeExample = () => {
+      const example = codeExamples[exampleIndex];
+      let characterIndex = 0;
+      typedCode.textContent = '';
+      output.textContent = '';
+
+      const typeNextCharacter = () => {
+        typedCode.textContent += example.code[characterIndex];
+        characterIndex += 1;
+
+        if (characterIndex < example.code.length) {
+          window.setTimeout(typeNextCharacter, 45);
+          return;
+        }
+
+        output.textContent = example.output;
+        exampleIndex = (exampleIndex + 1) % codeExamples.length;
+        window.setTimeout(typeExample, 2800);
+      };
+
+      typeNextCharacter();
+    };
+
+    typeExample();
+  }
+}
 
 document.querySelector('.menu-button').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });

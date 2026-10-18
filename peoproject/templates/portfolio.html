@@ -44,7 +44,7 @@
           <section class="hero">
             <div class="hero-copy">
               <div class="eyebrow"><span class="prompt">~/profile $</span> whoami</div>
-              <p class="hello">Hello, I’m</p>
+              <p class="hello" id="time-greeting">Good morning,</p>
               <h1>Moses<br><span>Kipsang</span><b>.</b></h1>
               <p class="role-line">Developer <span>·</span> Educator <span>·</span> Author</p>
               <p class="hero-summary">I develop digital platforms and teach programming. My work spans full-stack products, location-aware systems, and tools that make talent easier to discover.</p>
@@ -57,7 +57,12 @@
             </div>
           </section>
 
-          <section class="terminal-strip" aria-label="A quick introduction"><div class="terminal-prompt">mose@kiti:~$</div><div class="terminal-text">building <span>understanding</span> through code, teaching &amp; <span>resilience</span><i class="cursor"></i></div><div class="terminal-lights"><i></i><i></i><i></i></div></section>
+          <section class="terminal-strip python-terminal" aria-label="Animated Python code examples" aria-hidden="true">
+            <div class="code-terminal-bar"><span class="terminal-prompt">mose@portfolio:~$</span><span class="code-file">python portfolio.py</span><span class="code-running"><i></i> RUNNING</span></div>
+            <div class="code-terminal-body"><span class="code-line-number">01<br>02<br>03</span><pre class="code-source"><code class="typed-code">projects = ["XbomaSwift", "SakaTalent"]
+for project in projects:
+    print(f"Building {project}")</code><i class="code-cursor"></i></pre><div class="code-output"><span>›</span> Building XbomaSwift<br><span>›</span> Building SakaTalent</div></div>
+          </section>
 
           <section class="projects-section section-block" id="projects">
             <div class="section-heading"><div><span class="section-index">01 / SELECTED WORK</span><h2>Digital work built for real needs.</h2></div><p>Two platforms, two different challenges.</p></div>

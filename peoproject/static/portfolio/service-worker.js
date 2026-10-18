@@ -1,4 +1,4 @@
-const CACHE_NAME = 'moses-portfolio-v5';
+const CACHE_NAME = 'moses-portfolio-v6';
 const APP_SHELL = [
   '/',
   '/static/portfolio/manifest.webmanifest',

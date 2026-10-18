@@ -157,15 +157,22 @@ button { font: inherit; }
 .hero-art::after { position: absolute; inset: 55% 0 0; content: ""; background: linear-gradient(transparent, rgb(30 22 35 / 68%)); }
 .art-caption { position: absolute; z-index: 4; right: 16px; bottom: 13px; left: 16px; display: flex; justify-content: space-between; color: white; font: 8px var(--mono); letter-spacing: .08em; }
 
-/* Terminal status line */
-.terminal-strip { display: flex; min-height: 49px; margin: 19px 0 65px; padding: 14px 17px; align-items: center; gap: 13px; border-radius: 6px; color: #eee7ef; background: #2b202f; font: 10px var(--mono); }
+/* Animated Python terminal */
+.terminal-strip { min-height: 0; margin: 19px 0 65px; padding: 0; overflow: hidden; border: 1px solid rgb(255 255 255 / 9%); border-radius: 8px; color: #eee7ef; background: #211a27; box-shadow: 0 12px 30px rgb(20 12 24 / 9%); font: 10px var(--mono); }
+.code-terminal-bar { display: flex; min-height: 38px; padding: 0 15px; align-items: center; gap: 14px; border-bottom: 1px solid rgb(255 255 255 / 8%); background: #2b202f; }
 .terminal-prompt { color: #fa936c; white-space: nowrap; }
-.terminal-text { color: #d5cbd7; }
-.terminal-text span { color: #8bd0a6; }
-.cursor { display: inline-block; width: 6px; height: 12px; margin-left: 5px; vertical-align: -2px; background: #ee7044; animation: blink 1.1s steps(2, start) infinite; }
-.terminal-lights { display: flex; margin-left: auto; gap: 5px; }
-.terminal-lights i { width: 5px; height: 5px; border-radius: 50%; background: #806b83; }
+.code-file { color: #d5cbd7; }
+.code-running { display: flex; margin-left: auto; align-items: center; gap: 6px; color: #9dabb0; font-size: 8px; letter-spacing: .08em; }
+.code-running i { width: 6px; height: 6px; border-radius: 50%; background: #76c994; box-shadow: 0 0 8px rgb(118 201 148 / 55%); animation: pulse 1.7s ease-in-out infinite; }
+.code-terminal-body { display: grid; padding: 12px 17px 14px; grid-template-columns: 19px minmax(0, 1fr); column-gap: 12px; row-gap: 6px; }
+.code-line-number { color: #6f6474; font-size: 9px; line-height: 1.7; text-align: right; user-select: none; }
+.code-source { min-width: 0; margin: 0; overflow-wrap: anywhere; color: #d5cbd7; font: 10px/1.7 var(--mono); white-space: pre-wrap; }
+.typed-code { color: #d5cbd7; }
+.code-cursor { display: inline-block; width: 6px; height: 12px; margin-left: 3px; vertical-align: -2px; background: #ee7044; animation: blink 1.1s steps(2, start) infinite; }
+.code-output { grid-column: 2; color: #8bd0a6; font-size: 9px; line-height: 1.7; }
+.code-output span { color: #fa936c; }
 @keyframes blink { to { visibility: hidden; } }
+@keyframes pulse { 50% { opacity: .4; } }
 
 /* Shared sections */
 .section-block { padding-bottom: 68px; }
@@ -308,8 +315,11 @@ button { font: inherit; }
   .hello { margin-top: 21px; }
   .hero h1 { font-size: clamp(67px, 18vw, 78px); }
   .hero-art { min-height: 330px; max-width: 390px; justify-self: center; }
-  .terminal-strip { min-height: 46px; margin: 16px 0 49px; padding: 12px 10px; gap: 8px; font-size: 8px; }
-  .terminal-lights { display: none; }
+  .terminal-strip { margin: 16px 0 49px; font-size: 8px; }
+  .code-terminal-bar { min-height: 35px; padding: 0 10px; gap: 8px; }
+  .code-terminal-body { padding: 10px; grid-template-columns: 16px minmax(0, 1fr); column-gap: 8px; }
+  .code-source { font-size: 8px; }
+  .code-output { font-size: 8px; }
   .section-block { padding-bottom: 49px; }
   .section-heading { display: block; margin-bottom: 21px; }
   .section-heading h2 { font-size: 24px; }
