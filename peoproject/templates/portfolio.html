@@ -118,11 +118,12 @@
 
     <aside class="dock" aria-label="Quick navigation">
       <a href="#home" class="dock-icon active" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5v8a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></a>
-      <a href="#about" class="dock-icon" aria-label="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.5-4 3.1-6 7.5-6s7 2 7.5 6z"/></svg></a>
       <a href="#projects" class="dock-icon" aria-label="Selected projects"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 5V3h8v2M3 10h18m-11 0v2h4v-2"/></svg></a>
+      <a href="#about" class="dock-icon" aria-label="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.5-4 3.1-6 7.5-6s7 2 7.5 6z"/></svg></a>
       <a href="#background" class="dock-icon" aria-label="Background"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-12-2 14"/></svg></a>
+      <a href="#skills" class="dock-icon" aria-label="Skills and toolkit"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 16v-4m4 4V8m4 8v-6"/></svg></a>
+      <a href="#book" class="dock-icon book-dock" aria-label="The Silent Struggle"><svg viewBox="0 0 24 24"><path d="M3 5.5c3.4-.8 6.4-.2 9 1.7v13c-2.6-1.9-5.6-2.5-9-1.7zM21 5.5c-3.4-.8-6.4-.2-9 1.7v13c2.6-1.9 5.6-2.5 9-1.7z"/><path d="M12 7.2v13"/></svg></a>
       <span class="dock-divider"></span>
-      <a href="#book" class="dock-icon book-dock" aria-label="The Silent Struggle">✦</a>
       <span class="dock-spacer"></span>
       <a href="https://www.linkedin.com/in/moses-kipsang-8029553a1/" target="_blank" rel="noopener noreferrer" class="dock-icon" aria-label="Moses on LinkedIn"><svg viewBox="0 0 24 24"><path d="M6 9v10M6 5v.1M10 19v-6a4 4 0 0 1 8 0v6m-8-6v6"/><circle cx="6" cy="5" r="1"/></svg></a>
     </aside>
@@ -132,18 +133,20 @@
         <div class="window-bar"><div class="window-controls"><span></span><span></span><span></span></div><div class="window-name">Moses Kipsang · Selected Work</div><div class="window-actions">⌕ <span>⋮</span></div></div>
         <div class="window-content">
           <section class="hero">
-            <div class="hero-copy">
+            <div class="hero-intro">
               <div class="eyebrow"><span class="prompt">~/profile $</span> whoami</div>
               <p class="hello" id="time-greeting">Good morning,</p>
               <h1>I am Moses<br><span>Kipsang</span><b>.</b></h1>
-              <p class="role-line">Developer <span>·</span> Educator <span>·</span> Author</p>
-              <p class="hero-summary">I develop digital platforms and teach programming. My work spans full-stack products, location-aware systems, and tools that make talent easier to discover.</p>
-              <div class="hero-buttons"><a class="button button-primary" href="#projects">Explore selected work <span>↗</span></a><a class="button button-quiet" href="https://www.linkedin.com/in/moses-kipsang-8029553a1/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span>→</span></a></div>
-              <div class="hero-meta"><span><i class="live-dot"></i> Lecturer at KITI</span><span class="meta-divider"></span><span>Nakuru, Kenya <span class="kenya">◉</span></span></div>
             </div>
             <div class="hero-art">
               <img class="portrait-photo" src="{% static 'portfolio/moses-kipsang.jpg' %}" alt="Moses Kipsang">
               <div class="art-caption"><span>MOSES KIPSANG</span><span>NAKURU · KE</span></div>
+            </div>
+            <div class="hero-details">
+              <p class="role-line">Developer <span>·</span> Educator <span>·</span> Author</p>
+              <p class="hero-summary">I develop digital platforms and teach programming. My work spans full-stack products, location-aware systems, and tools that make talent easier to discover.</p>
+              <div class="hero-buttons"><a class="button button-primary" href="#projects">Explore selected work <span>↗</span></a><a class="button button-quiet" href="https://www.linkedin.com/in/moses-kipsang-8029553a1/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span>→</span></a></div>
+              <div class="hero-meta"><span><i class="live-dot"></i> Lecturer at KITI</span><span class="meta-divider"></span><span>Nakuru, Kenya <span class="kenya">◉</span></span></div>
             </div>
           </section>
 
@@ -183,7 +186,7 @@ for project in projects:
             <div class="skill-grid"><div class="skill-card"><span class="skill-icon icon-code">&lt;/&gt;</span><span class="skill-label">LANGUAGES</span><div class="skill-tags"><b>Python</b><b>C</b><b>C++</b><b>SQL</b><b>HTML5</b></div></div><div class="skill-card"><span class="skill-icon icon-framework">◈</span><span class="skill-label">FRAMEWORKS</span><div class="skill-tags"><b>Django</b></div></div><div class="skill-card"><span class="skill-icon icon-database">▦</span><span class="skill-label">DATABASES</span><div class="skill-tags"><b>PostgreSQL</b><b>SQLite</b></div></div><div class="skill-card"><span class="skill-icon icon-version">⌘</span><span class="skill-label">VERSION CONTROL</span><div class="skill-tags"><b>Git</b><b>Bitbucket</b></div></div></div>
           </section>
 
-          <section class="book-section" id="book"><div class="book-shape"><span>THE<br>SILENT<br>STRUGGLE</span><i>✳</i><small>MOSES KIPSANG</small></div><div class="book-copy"><span class="section-index">05 / AUTHOR</span><h2>Some battles are<br>quiet. The strength<br>to face them isn’t.</h2><p><em>The Silent Struggle</em> explores the unseen work of navigating adversity, taking responsibility, and learning to keep going when progress doesn’t show.</p><a class="button button-primary" href="https://gainclarity.gumroad.com/l/silentstruggle-free-guide" target="_blank" rel="noopener noreferrer">Get the free guide <span>↗</span></a></div><div class="book-spark">✳</div></section>
+          <section class="book-section" id="book"><div class="book-shape"><span>THE<br>SILENT<br>STRUGGLE</span><small>MOSES KIPSANG</small></div><div class="book-copy"><span class="section-index">05 / AUTHOR</span><h2>Some battles are<br>quiet. The strength<br>to face them isn’t.</h2><p><em>The Silent Struggle</em> explores the unseen work of navigating adversity, taking responsibility, and learning to keep going when progress doesn’t show.</p><a class="button button-primary" href="https://gainclarity.gumroad.com/l/silentstruggle-free-guide" target="_blank" rel="noopener noreferrer">Get the free guide <span>↗</span></a></div></section>
 
           <footer class="footer"><div><span class="footer-mark">●</span><span>Built with curiosity in Nakuru, Kenya.</span></div><span>© 2026 Moses Kipsang</span><a href="https://www.linkedin.com/in/moses-kipsang-8029553a1/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span>↗</span></a></footer>
         </div>
